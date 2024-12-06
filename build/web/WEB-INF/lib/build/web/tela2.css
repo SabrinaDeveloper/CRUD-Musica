@@ -1,0 +1,180 @@
+body {
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Garante que a altura da tela seja usada */
+    margin: 0; /* Remove margens padrão */
+}
+
+.title-conteiner {
+    margin-top: -250px;
+    justify-content: center;
+    align-items: center;
+    color: #1DB954;
+}
+
+.title-conteiner h1 {
+    font-family: 'Playfair Display';
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.campo {
+    display: flex;
+    gap: 60px; /* Espaço entre os elementos */
+    justify-content: center;
+    display: flex;
+}
+
+.campo input {
+    width: 250px; /* Ajuste esse valor conforme necessário */
+    padding: 5px; /* Adiciona um preenchimento interno para melhorar a aparência */
+    border-radius: 6px;
+    background-color: #C0C0C0;
+}
+
+.campo input[type="time"] {
+    width: 120px; /* Tamanho específico para o campo de duração */
+}
+
+.campo div {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    color: #A9A9A9;
+}
+
+/* Centralização do botão */
+.botao {
+    margin-top: 20px; /* Espaçamento entre os elementos acima */
+    background-color: #1DB954;
+    color: black;
+    font-size: 15px;
+    font-family: 'regular';
+    font-weight: 500;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 35px;
+
+    /* Centralização */
+    position: relative;
+    align-self: center; /* Centraliza no flexbox do pai */
+}
+
+.botao button {
+    border: none;
+    font-size: 20px;
+    font-family: 'Playfair Display';
+    text-decoration: none;
+    background-color: #1DB954;
+}
+
+/* Responsividade */
+
+/* Para telas pequenas e tablets */
+@media (max-width: 1024px) {
+    .title-conteiner h1 {
+        font-size: 50px;
+        margin-top: -150px;
+    }
+
+    .campo {
+        gap: 30px; /* Diminui o espaço entre os campos */
+        flex-direction: column; /* Faz os campos ficarem em coluna */
+        align-items: center;
+    }
+
+    .campo input {
+        width: 200px; /* Reduz a largura dos inputs */
+    }
+
+    .campo div {
+        font-size: 25px; /* Diminui o tamanho da fonte */
+    }
+}
+
+/* Para dispositivos móveis menores (celulares) */
+@media (max-width: 768px) {
+    .title-conteiner h1 {
+        font-size: 40px;
+        margin-top: -100px;
+    }
+
+    .campo {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campo input {
+        width: 180px;
+    }
+
+    .campo div {
+        font-size: 20px;
+    }
+
+    .botao {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-top: 20px; /* Ajuste para espaçamento */
+    }
+}
+
+/* Para dispositivos muito pequenos (celulares pequenos) */
+@media (max-width: 480px) {
+    .title-conteiner h1 {
+        font-size: 30px;
+        margin-top: -80px;
+    }
+
+    .campo {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campo input {
+        width: 150px;
+    }
+
+    .campo div {
+        font-size: 18px;
+    }
+
+    .botao {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* Para dispositivos ultra pequenos */
+@media (max-width: 320px) {
+    .title-conteiner h1 {
+        font-size: 24px;
+        margin-top: -60px;
+    }
+
+    .campo {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campo input {
+        width: 130px;
+    }
+
+    .campo div {
+        font-size: 16px;
+    }
+
+    .botao {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+}
